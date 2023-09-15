@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+/*** GENERAL ***/
+/* Import de la font Roboto depuis Google Fonts */
+ body * {
+   font-family: 'Syne', sans-serif;
+ }
+ h1 {
+   text-align: center;
+   font-size: 38px;
+   font-style: normal;
+   font-weight: 800!important;
+   line-height: normal;
+   text-transform: uppercase;
+ }
+ p {
+   color: #000;
+   text-align: center;
+   font-family: Syne;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+ }
+ .btn-primary a {
+   color: #FFF;
+   background-color: #E0B9B4!important;
+   font-size: 15px!important;
+   line-height: 37px!important;
+   margin-top: 25px;
+}
+.btn-primary a:hover {
+   background-color: #C02E44!important;
+}
+
+/* forme arrondie bas section*/
+ .marron {
+  position: absolute;
+  top: 27.5%;
+  left: 0;
+  z-index: 0;
+}
+.blanc {
+  position: absolute;
+  top: 28%;
+  left: 0;
+  z-index: 0;
+}
+
+ /* SHRINK EFFECT*/
+ /* .hover-effect {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+ }
+ .hover-effect:hover {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+ } */
+
+ /*** HEADER ***/
+.header h1 {
+   color: #3B8E46;
+}
+.header img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/** ENRJ plantes ***/
+.enrgplantes {
+  position: relative;
+  z-index: 100;
+}
+.enrgplantes h2 {
+   text-align: center;
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   margin-bottom: 35px;
+}
+
+/*** Les GOUTS ***/
+
+.gouts h2 {
+   text-align: center;
+   font-family: Syne;
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 800;
+   line-height: normal;
+   text-transform: uppercase;
+}
+
+.gouts h3 {
+   color: #FFF;
+   text-transform: uppercase;
+   text-align: center;
+   font-family: Syne;
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 800;
+   line-height: normal;
+   margin: 102px 49px!important;
+}
+.wp-block-heading.has-text-align-center.pamp.has-ast-global-color-4-color.has-text-color.has-link-color.wp-elements-d2262d80137ec96827c75e2fb381bc32 {
+   margin: 73px 18px 74px!important;
+}
+.wp-block-heading.has-text-align-center.framb.has-ast-global-color-4-color.has-text-color.has-link-color.wp-elements-3f4f25c349d67106ccd02372b5217a23 {
+   margin: 73px!important;
+}
+.wp-block-columns.is-layout-flex.wp-container-5.wp-block-columns-is-layout-flex,
+.wp-block-columns.is-layout-flex.wp-container-8.wp-block-columns-is-layout-flex {
+   width: 880px;
+}
+ .wp-block-column.bg-fraise.is-layout-flow.wp-block-column-is-layout-flow {
+   background: url(../images/bg-fraise-1.png), lightgray 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+ .wp-block-column.bg-pamp.is-layout-flow.wp-block-column-is-layout-flow {
+   background: url(../images/bg-pamplemousse.png), lightgray 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+ .wp-block-column.bg-framb.is-layout-flow.wp-block-column-is-layout-flow {
+   background: url(../images/bg-framboise.png), lightgray 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+ .wp-block-column.bg-citron.is-layout-flow.wp-block-column-is-layout-flow {
+   background: url(../images/bg-citron.png), lightgray 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+
+ /*** AVIS ***/
+ .avis .wp-image-162 {
+   width: 170px!important;
+ }
+ .avis .wp-image-164 {
+   width: 90px!important;
+ }
+ .avis .wp-image-165 {
+   width: 160px!important;
+ }
+ .avis p {
+   font-size: 16px;
+ }
+ .avis h3 {
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+ }
+ .wp-block-image.size-full.is-resized.canette {
+   margin-bottom: -52px;
+ }
