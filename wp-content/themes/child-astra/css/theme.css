@@ -30,69 +30,65 @@
    font-weight: 400;
    line-height: normal;
  }
- .btn-primary a {
+ .btn-primary {
+   font-size: 15px!important;
+   line-height: 37px!important;
+   margin-top: 25px;
+}
+.btn-primary a {
    color: #FFF;
    background-color: #E0B9B4!important;
    font-size: 15px!important;
    line-height: 37px!important;
-   margin-top: 25px;
 }
 .btn-primary a:hover {
    background-color: #C02E44!important;
 }
 
-/* Forme arrondie bas section*/
- /* .marron {
-  position: absolute;
-  top: 27.5%;
-  left: 0;
-  z-index: 0;
-}
-.blanc {
-  position: absolute;
-  top: 28%;
-  left: 0;
-  z-index: 0;
-} */
-
-
+/****** ACCUEIL ******/
  /*** HEADER ***/
- .header {
-  background-image:url(../images/bg-marron-forme-arrondie.svg);
-  background-position: bottom -60vh center;
-  background-size: cover;
-  background-repeat: no-repeat;
- }
- /* .bg-blanc {
-  background-image: url(../images/bg-blanc-forme-arrondie.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
- } */
 .header h1 {
    color: #3B8E46;
 }
-.header img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
 
 /** ENRJ plantes ***/
+.wp-block-group.alignfull.enrgplantes.is-layout-flow.wp-block-group-is-layout-flow {
+  padding-left: 0;
+}
+.enrgplantes .bg-marron {
+  width: 100vw;
+  margin-top: -18vh;
+  object-fit: cover;
+}
 .enrgplantes .bg-blanc {
-  object-fit: cover; 
+  width: 100vw;
+  margin-top: -44vh;
+  object-fit: cover;
 }
 .enrgplantes h2 {
    text-align: center;
    font-size: 30px;
    font-style: normal;
+   text-transform: none;
    font-weight: 700;
    line-height: normal;
    margin-bottom: 35px;
+   margin-top: -29vh;
+   z-index: 100;
+   position: relative;
+}
+.enrgplantes p {
+  z-index: 100;
+  position: relative;
 }
 
 /*** Les GOUTS ***/
-
+.gouts {
+  background-image:url(../images/bg-blanc-forme-arrondie.svg);
+  background-position: bottom -92vh center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .gouts h2 {
    text-align: center;
    font-size: 30px;
@@ -101,7 +97,6 @@
    line-height: normal;
    text-transform: uppercase;
 }
-
 .gouts h3 {
    color: #FFF;
    text-transform: uppercase;
@@ -146,13 +141,13 @@
 
  /*** AVIS ***/
  .avis .wp-image-162 {
-   width: 170px!important;
+   width: 250px!important;
  }
  .avis .wp-image-164 {
-   width: 90px!important;
+   width: 130px!important;
  }
  .avis .wp-image-165 {
-   width: 160px!important;
+   width: 240px!important;
  }
  .avis p {
    font-size: 16px;
@@ -163,6 +158,40 @@
    font-weight: 700;
    line-height: normal;
  }
- /* .wp-block-image.size-full.is-resized.canette {
-   margin-bottom: -52px;
- } */
+
+
+/****** NOUS RENCONTRER ******/
+/*** CONTACT FORM ***/
+.contact {
+  background-image:url(../images/feuilles-plante-form.svg);
+  background-position: bottom 9vh left 36%;
+  background-size: 15%;
+  background-repeat: no-repeat;
+}
+ .wpcf7-form.init {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+ }
+ .wpcf7 input:not([type=submit]) {
+    padding: 1.5em;
+    border-radius: 7px;
+ }
+ .wpcf7 form>div, .wpcf7 form>p {
+  text-align: left;
+}
+ label {
+  line-height: 2.5em;
+ }
+.wpcf7-form-control.wpcf7-submit.has-spinner.btn-primary {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 55%;
+}
+
+ /*** FOOTER ***/
+ .site-footer p {
+  font-size: 16px;
+ }
