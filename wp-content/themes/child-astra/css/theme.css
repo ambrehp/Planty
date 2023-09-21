@@ -240,12 +240,91 @@ label {
 
 
  /****** COMMANDE ******/
- .commande h2 {
+.woocommerce-breadcrumb {display: none;}
+.commande h2 {
+  font-weight: 700;
   text-align: left;
   text-transform: none;
  }
- .commande .wpcf7-form.init {
+.commande form {
+  display: flex;
+  gap: 10px;
+ }
+
+ .quantity.buttons_added {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+ }
+
+ /* Styles pour l'input number */
+.commande .quantity input[type="number"] {
+  color: #000;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin: 0;
+}
+
+ /* Styles pour le conteneur des boutons de quantité */
+ .commande .quantity-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 44%;
+    height: 60%;
+    background-color: #DC9F96;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+/* .woocommerce-js .quantity .minus,
+.woocommerce-js .quantity .plus {
+  width: 27px;
+} */
+
+/* Style pour le bouton '+' */
+.commande .quantity-plus {
+  border-bottom: 1px solid #fff;
+  padding: 0;
+}
+.commande .quantity-controls .plus {
+  color: #fff;
+  border: 0;
+  margin: 0;
+}
+
+/* Style pour le bouton '-' */
+.commande .qquantity-minus {
+  padding: 0;
+}
+.commande .quantity-controls .minus {
+  color: #fff;
+  border: 0;
+  margin: 0;
+}
+
+/* Style pour le bouton commander */
+.commande button[type="submit"] {
+  background-color: #E0B9B4;
+  color: #fff;
+  height: 100%;
+  font-size: 15px;
+  padding: 10px 44px;
+ }
+
+.commande .wpcf7-form.init {
   width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
  }
  .commande .wpcf7.js h3 {
   color: #FFF;
