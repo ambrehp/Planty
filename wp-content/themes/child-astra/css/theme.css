@@ -240,18 +240,22 @@ label {
 
 
  /****** COMMANDE ******/
-.woocommerce-breadcrumb {display: none;}
 .commande h2 {
   font-weight: 700;
   text-align: left;
   text-transform: none;
  }
+ .woocommerce-js div.product form.cart {
+  zoom: 1.3;
+}
 .commande form {
   display: flex;
-  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
  }
 
- .quantity.buttons_added {
+.commande .quantity.buttons_added {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -266,28 +270,24 @@ label {
   font-weight: 400;
   line-height: normal;
   width: 100%;
-  height: 60%;
+  height: 100%;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   margin: 0;
 }
 
  /* Styles pour le conteneur des boutons de quantité */
+ .woocommerce-js .quantity .minus, .woocommerce-js .quantity .plus {height: 24px;}
  .commande .quantity-controls {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 44%;
-    height: 60%;
+    height: 100%;
     background-color: #DC9F96;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
 }
-
-/* .woocommerce-js .quantity .minus,
-.woocommerce-js .quantity .plus {
-  width: 27px;
-} */
 
 /* Style pour le bouton '+' */
 .commande .quantity-plus {
@@ -310,32 +310,55 @@ label {
   margin: 0;
 }
 
-/* Style pour le bouton commander */
+/* Style pour le bouton ok */
 .commande button[type="submit"] {
   background-color: #E0B9B4;
   color: #fff;
-  height: 100%;
+  height: 50px;
   font-size: 15px;
-  padding: 10px 44px;
+  padding: 10px 43px!important;
+  display: inline;
  }
 
+ /*** Formulaire livraison ***/
 .commande .wpcf7-form.init {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
+  align-items: stretch;
  }
- .commande .wpcf7.js h3 {
+.commande .wpcf7.js h3 {
   color: #FFF;
   font-size: 30px;
  }
- .commande .wpcf7.js p {
+.commande .wpcf7.js p {
   text-align: left;
   color: #FFF;
-  font-size: 20px;
  }
- 
+.col-left {
+  width: 50%;
+  padding-right: 40px;
+  border-right: 1px solid #fff;
+  height: 500px;
+ }
+.col-right {
+  width: 50%;
+  padding-left: 40px;
+ }
+.wpcf7-form.init input[type=number] {
+  max-width: 100%;
+  border-radius: 7px;
+  height: 76px;
+}
+
+ /* Bouton envoie */
+ .wpcf7-form-control.wpcf7-submit.has-spinner.btn-primary {
+  position: absolute;
+  left: 39%;
+  bottom: -10%;
+}
 
  /*** FOOTER ***/
  .site-footer p {
