@@ -33,6 +33,11 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 </head>
 
 <body <?php astra_schema_body(); ?> <?php body_class(); ?>>
+<!-- <header>
+	<?php if(is_user_logged_in()) : ?>
+	connecté !
+	<?php endif; ?>
+</header> -->
 <?php astra_body_top(); ?>
 <?php wp_body_open(); ?>
 
