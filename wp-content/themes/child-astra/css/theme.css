@@ -47,13 +47,14 @@
 }
 
 /****** ACCUEIL ******/
- /*** HEADER ***/
+/*** HEADER ***/
 .header h1 {
    color: #3B8E46;
 }
 
 /** ENRJ plantes ***/
-.wp-block-group.alignfull.enrgplantes.is-layout-flow.wp-block-group-is-layout-flow {
+.entry-content[ast-blocks-layout] .alignfull {
+  padding-right: 0;
   padding-left: 0;
 }
 .enrgplantes .bg-marron {
@@ -63,14 +64,14 @@
 }
 .enrgplantes .bg-blanc {
   width: 100vw;
-  margin-top: -40vh;
+  margin-top: -44vh;
   object-fit: cover;
 }
 .enrgplantes .content {
   z-index: 100;
   position: absolute;
-  top: 33%;
-  left: 35%;
+  top: 35%;
+  left: 40%;
 }
 .enrgplantes h2 {
    text-align: center;
@@ -174,31 +175,29 @@
 
  /*** EQUIPE ***/
 .wp-block-group.alignfull.equipe.has-white-background-color.has-background.is-layout-flow.wp-block-group-is-layout-flow {
-padding-left: 0;
-padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
  .equipe .bg-blanc {
   width: 100vw;
-  margin-top: -47vh;
+  margin-top: -14vh;
   object-fit: cover;
+}
+.equipe .content {
+  margin-top: -20%!important;
 }
 .equipe h2 {
   margin-bottom: 35px;
-  margin-top: -29vh;
-  z-index: 100;
-  position: relative;
 }
 .wp-block-columns.alignfull.membres.is-layout-flex.wp-container-6.wp-block-columns-is-layout-flex {
   width: 70%;
-  z-index: 100;
-  position: relative;
 }
 .equipe .membres figure {
   margin: 20px 0;
 }
 .equipe .branche-g {
   position: absolute;
-  top: 54em;
+  top: 51em;
   right: 3vw;
 }
 
@@ -236,6 +235,14 @@ label {
   justify-content: center;
   margin: 0 auto;
   width: 55%;
+}
+.contact .wpcf7-form-control.wpcf7-submit.has-spinner.btn-primary {
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+}
+.contact .canette {
+  margin-top: 90px;
 }
 
 
@@ -352,15 +359,520 @@ label {
   border-radius: 7px;
   height: 76px;
 }
-
- /* Bouton envoie */
- .wpcf7-form-control.wpcf7-submit.has-spinner.btn-primary {
+.commande .btn {
   position: absolute;
-  left: 39%;
-  bottom: -10%;
+  left: 42%;
+  bottom: -20%;
 }
 
  /*** FOOTER ***/
  .site-footer p {
   font-size: 16px;
  }
+
+
+/************* MEDIA QUERIES ***************/
+
+/***** Ecran 1440px *****/
+
+@media screen and (max-width:1440px) {
+  /****** ACCUEIL ******/
+  /** ENRJ plantes ***/
+  .enrgplantes .bg-blanc {
+    margin-top: -33vh;
+  }
+  .enrgplantes .content {
+    top: 33%;
+    left: 36%;
+  }
+
+  /****** NOUS RENCONTRER ******/
+  /*** EQUIPE ***/
+  .equipe .branche-g {
+    top: 49em;
+  }
+  /*** CONTACT ***/
+  .contact {
+    background-position: bottom 24vh left 33%;
+  }
+
+  /****** COMMANDE ******/
+  /** Produits **/
+  .woocommerce-js .quantity .plus {
+    width: 29px;
+  }
+  .woocommerce-js div.product form.cart .button {
+    width: 70%;
+  }
+
+  /** Livraison **/
+  .commande .btn {
+    left: 39%;
+  }
+  .commande button[type="submit"] {
+    padding: 10px 5px!important;
+  }
+}
+
+
+/***** Ecran 1024px *****/
+
+@media screen and (max-width:1024px) {
+  /****** ACCUEIL ******/
+  /** HEADER ***/
+  .header .wp-image-254 {
+    margin-right: 80px;
+  }
+  /** ENRJ plantes ***/
+  .enrgplantes .bg-blanc {
+    margin-top: -23vh;
+  }
+  .enrgplantes .content {
+    top: 33%;
+    left: 27%;
+  }
+
+  /*** Les GOUTS ***/
+  .gouts .wp-container-6,
+  .wp-container-9 {
+    width: 95%;
+  }
+  .gouts h3 {
+    font-size: 35px;
+  }
+
+  /*** AVIS ***/
+  .wp-block-group.alignfull.avis.is-layout-constrained.wp-container-22.wp-block-group-is-layout-constrained {
+    width: 90%;
+  }
+  .avis .wp-image-165 {
+    width: 340px!important;
+  }
+  .avis .wp-image-164 {
+    width: 230px!important;
+  }
+
+  /****** NOUS RENCONTRER ******/
+  /*** HEADER ***/
+  .header {
+    padding-top: 5vh!important;
+  }
+  .header .content {
+    margin-top: -11vh;
+  }
+
+  /*** EQUIPE ***/
+  .equipe .wp-block-columns.alignfull.membres.is-layout-flex.wp-container-6.wp-block-columns-is-layout-flex {
+    width: 100%;
+  }
+  .equipe :where(body .is-layout-flex) {
+    gap: 0;
+  }
+  .equipe .branche-g {
+    top: 51em;
+  }
+  .equipe .wp-image-266 {
+    width: 100px!important;
+  }
+
+  /*** CONTACT ***/
+  .contact {
+    background-position: bottom 21vh left 25%;
+    background-size: 20%;
+  }
+  .contact .wpcf7-form.init {
+    width: 40%;
+  }
+
+  /****** COMMANDE ******/
+  /** Produits **/
+  .woocommerce-js div.product form.cart div.quantity {
+    margin: 0 10px 20px 0;
+  }
+  .woocommerce-js .quantity .plus {
+    width: 22px;
+  }
+
+  /** Livraison **/
+  .commande .wpcf7.js h3 {
+    font-size: 25px;
+  }
+  .commande .btn {
+    left: 35%;
+    bottom: -15%;
+  }
+}
+
+
+/***** Ecran 768px *****/
+
+@media screen and (max-width:768px) {
+  h1, .entry-content h1 {
+    font-size: 30px;
+  }
+/****** ACCUEIL ******/
+/** HEADER ***/
+
+.header .wp-image-254 {
+  width: 80%;
+  margin-right: 0;
+  }
+
+  /** ENRJ plantes ***/
+  .enrgplantes {
+    padding-bottom: 80px!important;
+  }
+  .enrgplantes .bg-blanc {
+    margin-top: -17vh;
+  }
+  .enrgplantes .content {
+    top: 62vh;
+    left: 22%;
+  }
+
+  /*** Les GOUTS ***/
+  .wp-block-columns.is-layout-flex.wp-container-6.wp-block-columns-is-layout-flex,
+  .wp-block-columns.is-layout-flex.wp-container-9.wp-block-columns-is-layout-flex {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .gouts .wp-container-6,
+  .wp-container-9 {
+    width: 70%;
+  }
+
+  /*** AVIS ***/
+  .wp-block-group.alignfull.avis.is-layout-constrained.wp-container-22.wp-block-group-is-layout-constrained {
+    width: 70%;
+  }
+  .wp-container-21.wp-container-21 {
+    gap: 100px 0!important;
+  }
+  .wp-container-13.wp-container-13,
+  .wp-container-16.wp-container-16,
+  .wp-container-19.wp-container-19 {
+    gap: 60px;
+  }
+  .avis .wp-image-162 {
+    width: 190px!important;
+  }
+  .avis .wp-image-164,
+  .avis .wp-image-165 {
+    width: 170px!important;
+  }
+
+  /****** NOUS RENCONTRER ******/
+  /*** HEADER ***/
+  .header .wp-image-261 {
+    width: 20%;
+  }
+  .header .content {
+    width: 60%;
+  }
+
+  /*** EQUIPE ***/
+  .equipe .wp-block-columns {
+    flex-wrap: nowrap!important;
+  }
+  .equipe .branche-g {
+    display: none;
+  }
+
+  /*** CONTACT ***/
+  .contact {
+    background-position: bottom 18vh left 7%;
+    background-size: 30%;
+  }
+  .contact .wpcf7-form.init {
+    width: 60%;
+  }
+
+  /****** COMMANDE ******/
+  .commande {
+    padding-left: 0!important;
+  }
+  .wp-container-14.wp-container-14 > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: 90%!important;
+  }
+
+  /** Produits **/
+  .commande .wp-block-columns {
+    flex-wrap: nowrap!important;
+  }
+  .commande .wp-container-13.wp-container-13 {
+    gap: 30px;
+  }
+  .commande form {
+    flex-direction: column;
+  }
+  .woocommerce-js div.product {
+    margin-top: 0;
+  }
+  .woocommerce-js input[type=number] {
+    max-width: 80px;
+  }
+  .commande .quantity-controls {
+    width: 50%;
+  }
+  .woocommerce-js .quantity .plus {
+    width: 70px;
+  }
+  .woocommerce-js div.product form.cart {
+    zoom: 1;
+  }
+  .woocommerce-js div.product form.cart div.quantity {
+    margin: 0 0 10px 0;
+  }
+  .woocommerce-js div.product form.cart .button {
+    width: 100%;
+  }
+
+  /** livraison **/
+  .commande .btn {
+    left: 37%;
+    bottom: -20%;
+  }
+  input[type="submit"] {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+}
+
+
+/***** Ecran 500px *****/
+
+@media screen and (max-width:500px) {
+
+  h1, .entry-content h1 {
+    font-size: 25px;
+  }
+
+/****** ACCUEIL ******/
+/** HEADER ***/
+  .header .wp-image-254 {
+    height: 30vh!important;
+    margin-top: -70px;
+    width: 70%!important;
+    margin-right: 30px;
+  }
+
+  /** ENRJ plantes ***/
+  .enrgplantes {
+    padding-bottom: 30%!important;
+  }
+  .enrgplantes .bg-blanc {
+    margin-top: -11vh;
+  }
+  .enrgplantes .content {
+    top: 37vh;
+    left: 2%;
+    padding: 0 10px;
+  }
+
+  /*** Les GOUTS ***/
+  .gouts {
+    padding: 40px 14px!important;
+  }
+  .gouts h2 {
+    font-size: 25px;
+  }
+  .gouts h3 {
+    font-size: 26px;
+  }
+
+  /*** AVIS ***/
+  .avis {
+    padding-top: 40px!important;
+  }
+  .avis h2 {
+    font-size: 25px!important;
+  }
+  .wp-container-21.wp-container-21 {
+    gap: 30px 0!important;
+  }
+  .wp-container-13.wp-container-13, .wp-container-16.wp-container-16, .wp-container-19.wp-container-19 {
+    gap: 30px;
+  }
+  .avis .wp-image-164 {
+    width: 100px!important;
+  }
+
+  /****** NOUS RENCONTRER ******/
+  /*** HEADER ***/
+  .header {
+    padding-top: 3vh!important;
+    padding-left: 0!important;
+  }
+  .header .wp-image-261 {
+    width: 17%;
+    margin-left: 17px;
+  }
+  .header .content {
+    width: 80%;
+    margin-top: -50px;
+  }
+  .header h1 {
+    font-size: 23px;
+  }
+
+  /*** EQUIPE ***/
+  .equipe .wp-block-columns {
+    flex-wrap: wrap!important;
+  }
+  .equipe .content {
+    padding-top: 30px;
+  }
+
+  /****** COMMANDE ******/
+  .wp-container-14.wp-container-14 > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: 80%!important;
+  }
+  
+  /** Produits **/
+  .wp-block-columns {
+    flex-direction: column;
+  }
+  .commande form {
+    flex-direction: row;
+  }
+  .woocommerce-js div.product form.cart div.quantity {
+    margin: 0 10px 14px 0;
+    width: 100%;
+  }
+  .woocommerce-js .quantity .plus {
+    width: 94px;
+  }
+  .woocommerce-js .quantity .minus, .woocommerce-js .quantity .plus {
+    height: 30px;
+  }
+  .commande button[type="submit"] {
+    height: 60px;
+  }
+
+  /** Livraison **/
+  .commande .wpcf7-form.init {
+    flex-direction: column;
+  }
+  .col-left,
+  .col-right {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    border-right: none;
+  }
+  .commande .btn {
+    left: 21%;
+    bottom: -10%;
+  }
+  input[type="submit"] {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}
+
+
+/***** Ecran 425px *****/
+
+@media screen and (max-width:425px) {
+
+  /*** ENRJ plantes ***/
+  .enrgplantes {
+    padding-bottom: 50%!important;
+  }
+  .enrgplantes .content {
+    top: 40vh;
+    left: 0;
+  }
+  .enrgplantes .bg-blanc {
+    margin-top: -9vh;
+  }
+
+  /*** Les GOUTS ***/
+  .gouts .wp-container-6, .wp-container-9 {
+    width: 90%;
+  }
+
+  /*** AVIS ***/
+  .wp-block-group.alignfull.avis.is-layout-constrained.wp-container-22.wp-block-group-is-layout-constrained {
+    width: 80%;
+  }
+  .avis .wp-image-162 {
+    width: 140px!important;
+  }
+
+  /****** COMMANDE ******/
+  /** Produits **/
+  .woocommerce-js .quantity .plus {
+    width: 80px;
+  }
+
+  /** Livraison **/
+  .commande .btn {
+    left: 15%;
+    bottom: -12%;
+  }
+}
+
+/***** Ecran 375px *****/
+@media screen and (max-width:375px) {
+  /****** ACCUEIL ******/
+  /*** HEADER ***/
+  .header {
+    padding-top: 40px;
+  }
+
+  /** ENRJ plantes ***/
+  .enrgplantes .bg-blanc {
+    margin-top: -8vh;
+  }
+  .enrgplantes .content {
+    top: 37vh;
+  }
+
+  /*** AVIS ***/
+  .avis h2 {
+    font-size: 20px!important;
+  }
+  .avis h3 {
+    font-size: 20px;
+    margin-bottom: 10px!important;
+  }
+  .avis .wp-image-162 {
+    width: 200px!important;
+  }
+  .avis .wp-image-164 {
+    width: 175px!important;
+  }
+  .avis .wp-image-165 {
+    width: 240px!important;
+  }
+
+
+  /****** NOUS RENCONTRER ******/
+  /*** HEADER ***/
+  .header figure {
+    display: none;
+  }
+  .header .content {
+    margin-top: 0;
+  }
+
+  /*** CONTACT ***/
+  .contact {
+    background-image: none;
+  }
+  .contact .wpcf7-form.init {
+    width: 80%;
+  }
+
+  /****** COMMANDE ******/
+  /** Produits **/
+  .woocommerce-js .quantity .plus {
+    width: 65px;
+  }
+
+  /** Livraison **/
+  .commande .btn {
+    left: 10%;
+  }
+}

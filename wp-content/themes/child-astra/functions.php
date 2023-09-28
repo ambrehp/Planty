@@ -33,5 +33,5 @@ function ajouter_lien_admin_menu($items) {
     return $items;
 }
 
-add_filter('wp_nav_menu_objects', 'ajouter_lien_admin_menu');
+add_filter('wp_nav_menu_objects', 'ajouter_lien_admin_menu'); // fonction intégrée à WordPress qui permet de récupérer les éléments d'un menu de navigation sous forme d'objets
 
