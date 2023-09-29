@@ -70,8 +70,8 @@
 .enrgplantes .content {
   z-index: 100;
   position: absolute;
-  top: 35%;
-  left: 40%;
+  top: 34%;
+  left: 38%;
 }
 .enrgplantes h2 {
    text-align: center;
@@ -84,12 +84,6 @@
 }
 
 /*** Les GOUTS ***/
-.gouts {
-  background-image:url(../images/bg-blanc-forme-arrondie.svg);
-  background-position: bottom -92vh center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .gouts h2 {
    text-align: center;
    font-size: 30px;
@@ -101,44 +95,8 @@
 .wp-container-6,
 .wp-container-9 {
   width: 70%;
+  margin: 50px auto;
 }
-.gouts h3 {
-   color: #FFF;
-   text-transform: uppercase;
-   text-align: center;
-   font-family: 'Syne';
-   font-size: 48px;
-   font-style: normal;
-   font-weight: 800;
-   line-height: normal;
-   margin: 102px 49px!important;
-}
- .wp-block-heading.has-text-align-center.pamp.has-ast-global-color-4-color.has-text-color.has-link-color.wp-elements-d2262d80137ec96827c75e2fb381bc32 {
-   margin: 73px 18px 74px!important;
-}
-.wp-block-heading.has-text-align-center.framb.has-ast-global-color-4-color.has-text-color.has-link-color.wp-elements-3f4f25c349d67106ccd02372b5217a23 {
-   margin: 73px!important;
-}
- .wp-block-column.bg-fraise.is-layout-flow.wp-block-column-is-layout-flow {
-   background: url(../images/bg-fraise-1.png), lightgray 50%;
-   background-size: cover;
-   background-repeat: no-repeat;
- }
- .wp-block-column.bg-pamp.is-layout-flow.wp-block-column-is-layout-flow {
-   background: url(../images/bg-pamplemousse.png), lightgray 50%;
-   background-size: cover;
-   background-repeat: no-repeat;
- }
- .wp-block-column.bg-framb.is-layout-flow.wp-block-column-is-layout-flow {
-   background: url(../images/bg-framboise.png), lightgray 50%;
-   background-size: cover;
-   background-repeat: no-repeat;
- }
- .wp-block-column.bg-citron.is-layout-flow.wp-block-column-is-layout-flow {
-   background: url(../images/bg-citron.png), lightgray 50%;
-   background-size: cover;
-   background-repeat: no-repeat;
- }
 
  /*** AVIS ***/
  .wp-block-group.alignfull.avis.is-layout-constrained.wp-container-22.wp-block-group-is-layout-constrained {
@@ -202,11 +160,11 @@
 }
 
 /*** CONTACT FORM ***/
-.contact {
-  background-image:url(../images/feuilles-plante-form.svg);
-  background-position: bottom 25vh left 33%;
-  background-size: 15%;
-  background-repeat: no-repeat;
+.contact .plante {
+  position: absolute;
+  left: 27%;
+  bottom: 16%;
+  z-index: 0;
 }
 .contact h2 {
   text-transform: none;
@@ -217,6 +175,7 @@
   flex-direction: column;
   margin: 0 auto;
   padding-bottom: 40px;
+  z-index: 1;
  }
 .woocommerce-js input[type=email],
 .woocommerce-js input[type=text],
@@ -392,8 +351,9 @@ label {
     top: 49em;
   }
   /*** CONTACT ***/
-  .contact {
-    background-position: bottom 24vh left 33%;
+  .contact .plante {
+    left: 25%;
+    bottom: 14%;
   }
 
   /****** COMMANDE ******/
@@ -428,8 +388,8 @@ label {
     margin-top: -23vh;
   }
   .enrgplantes .content {
-    top: 33%;
-    left: 27%;
+    top: 32%;
+    left: 28%;
   }
 
   /*** Les GOUTS ***/
@@ -476,9 +436,9 @@ label {
   }
 
   /*** CONTACT ***/
-  .contact {
-    background-position: bottom 21vh left 25%;
-    background-size: 20%;
+  .contact .plante {
+    left: 16%;
+    bottom: 13%;
   }
   .contact .wpcf7-form.init {
     width: 40%;
@@ -531,15 +491,13 @@ label {
   }
 
   /*** Les GOUTS ***/
-  .wp-block-columns.is-layout-flex.wp-container-6.wp-block-columns-is-layout-flex,
-  .wp-block-columns.is-layout-flex.wp-container-9.wp-block-columns-is-layout-flex {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .gouts .wp-container-6,
-  .wp-container-9 {
-    width: 70%;
-  }
+  .gouts .fraise,
+  .gouts .pamp,
+  .gouts .framb,
+  .gouts .citron {
+    float: none!important;
+    margin: 0 auto!important;
+ }
 
   /*** AVIS ***/
   .wp-block-group.alignfull.avis.is-layout-constrained.wp-container-22.wp-block-group-is-layout-constrained {
@@ -579,9 +537,9 @@ label {
   }
 
   /*** CONTACT ***/
-  .contact {
-    background-position: bottom 18vh left 7%;
-    background-size: 30%;
+  .contact .plante {
+    left: 1%;
+    bottom: 13%;
   }
   .contact .wpcf7-form.init {
     width: 60%;
@@ -723,6 +681,15 @@ label {
     padding-top: 30px;
   }
 
+  /*** CONTACT ***/
+  .contact .plante {
+    left: 0%;
+    bottom: 11%;
+  }
+  .contact .wp-image-485 {
+    width: 200px!important;
+  }
+
   /****** COMMANDE ******/
   .wp-container-14.wp-container-14 > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
     max-width: 80%!important;
@@ -858,8 +825,8 @@ label {
   }
 
   /*** CONTACT ***/
-  .contact {
-    background-image: none;
+  .contact .plante {
+    display: none;
   }
   .contact .wpcf7-form.init {
     width: 80%;
